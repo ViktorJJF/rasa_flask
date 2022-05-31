@@ -1,6 +1,11 @@
 version: "3.1"
 
 nlu:
+  - intent: get_name
+    examples: |
+      - My name is [Rick] (user_name) 
+      - My name is [Morty] (user_name)
+      - [Archer] (user_name) is my name
   - intent: greet
     examples: |
       - Hola
@@ -92,3 +97,15 @@ nlu:
       - are you a human?
       - am I talking to a bot?
       - am I talking to a human?
+  - intent: request_names
+    examples: |
+      - Quiero decirte mi nombre
+      - dar nombre
+  - intent: consulta_nombre
+    examples: |
+      - ¿Cual es mi nombre?
+  - intent: out_of_scope
+    examples: |
+      - I want to order food
+      - What is 2 + 2?
+      - Who's the US President?

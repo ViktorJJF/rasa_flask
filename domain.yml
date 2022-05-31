@@ -8,6 +8,9 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - get_name
+  - consulta_nombre
+  - nlu_fallback
 
 responses:
   utter_greet:
@@ -28,6 +31,55 @@ responses:
 
   utter_iamabot:
     - text: "I am a bot, powered by Rasa."
+  utter_ask_first_name:
+    - text: "Cual es tu nombre?"
+  utter_ask_last_name:
+    - text: "Genial! eres {first_name}, cual es tu apellido?"
+  utter_slots_values:
+    - text: "Se que eres {first_name} con apellido {last_name}"
+  utter_submit:
+    - text: "Gracias por la data!"
+
+  utter_fallback:
+    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  utter_default:
+    - text: Perdon, no entendi. Podrias repetirlo?
+
+forms:
+  name_form:
+    required_slots:
+      - first_name
+      - last_name
+slots:
+  language:
+    type: text
+    initial_value: "aea"
+    mappings:
+      - type: custom
+
+  databot_carousel:
+    type: any
+    initial_value: '{ "value": { "from": "1", "to": "2" } }'
+    mappings:
+      - type: custom
+
+  first_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: first_name
+  last_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: last_name
 
 session_config:
   session_expiration_time: 60
