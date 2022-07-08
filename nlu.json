@@ -1,0 +1,120 @@
+{
+    "output": {
+        "intents": [],
+        "entities": [],
+        "generic": [
+            {
+                "response_type": "text",
+                "text": "Bienvenid@, soy asistente virtual de la DT. Elige una de las siguientes opciones:"
+            },
+            {
+                "title": "",
+                "options": [
+                    {
+                        "label": "📝 Trámites y servicios",
+                        "value": {
+                            "input": {
+                                "text": "🗎 Trámites y servicios"
+                            }
+                        }
+                    },
+                    {
+                        "label": "👨‍💼 Consulta Laboral",
+                        "value": {
+                            "input": {
+                                "text": "👨‍💼 Consulta Laboral"
+                            }
+                        }
+                    },
+                    {
+                        "label": "✔️ Finiquito Laboral",
+                        "value": {
+                            "input": {
+                                "text": "✔️ Finiquito Laboral"
+                            }
+                        }
+                    },
+                    {
+                        "label": "📜 Certificados",
+                        "value": {
+                            "input": {
+                                "text": "📜 Certificados"
+                            }
+                        }
+                    },
+                    {
+                        "label": "✔️ Renuncia Voluntaria",
+                        "value": {
+                            "input": {
+                                "text": "✔️ Renuncia Voluntaria"
+                            }
+                        }
+                    },
+                    {
+                        "label": "✅ Escriba aquí su consulta",
+                        "value": {
+                            "input": {
+                                "text": "✅ Escriba aquí su consulta"
+                            }
+                        }
+                    }
+                ],
+                "response_type": "option"
+            }
+        ],
+        "user_defined": {
+            "nodeName": "Welcome"
+        }
+    },
+    "user_id": "75fb49f0-7d26-11eb-9439-0242ac130002",
+    "context": {
+        "global": {
+            "system": {
+                "session_start_time": "2022-07-07T20:56:41.241Z",
+                "user_id": "75fb49f0-7d26-11eb-9439-0242ac130002",
+                "turn_count": 1,
+                "state": "eyJpZCI6ImUzZWQ3YmI0LWViZjctNDkyNy1iODRkLTk1MDhjYjI1NjczNSIsInNraWxscyI6W3siY29uZmlnIjp7ImFjdGlvbnMiOmZhbHNlLCJ3b3Jrc3BhY2VfaWQiOiI3OGU0MDRjYS0wODlmLTQ4MTEtOTY2My1jZThmZWM3N2NlNjIiLCJza2lsbF9yZWZlcmVuY2VfaWQiOm51bGx9LCJkaXNhYmxlZCI6bnVsbCwibGFuZ3VhZ2UiOiJlcyIsInNraWxsX3R5cGUiOiJkaWFsb2ciLCJza2lsbF9yZWZlcmVuY2UiOiJtYWluIHNraWxsIiwic2tpbGxfc25hcHNob3RfaWQiOm51bGwsInNraWxsX3NuYXBzaG90X25hbWUiOm51bGwsIndvcmtlcl9kZWZpbml0aW9uX2lkIjoiNzhlNDA0Y2EtMDg5Zi00ODExLTk2NjMtY2U4ZmVjNzdjZTYyIn1dLCJsYW5ndWFnZSI6bnVsbCwidGVuYW50X2lkIjoiZjc3N2Q2YzEtNDFmMy00YWFkLTkyZmQtNzYyZjJhNTQwZDFlIiwiZW52aXJvbm1lbnQiOm51bGwsImRlZmF1bHRfaW5zdGFuY2UiOnRydWUsImRpc2FibGVfZmFsbGJhY2siOnRydWUsImFnZW50X2RlZmluaXRpb25faWQiOiJlM2VkN2JiNC1lYmY3LTQ5MjctYjg0ZC05NTA4Y2IyNTY3MzUiLCJwYXJlbnRfYXNzaXN0YW50X2lkIjpudWxsfQ=="
+            },
+            "session_id": "a5fdb6c6-7bb4-46b9-be91-1eeaef8c5489"
+        },
+        "skills": {
+            "main skill": {
+                "user_defined": {
+                    "client_host_name": "www.dt.gob.cl",
+                    "client_path_name": "/portal/1626/w3-channel.html",
+                    "bot_id": "1324",
+                    "dentroHorario": false,
+                    "is_qa": false,
+                    "is_local": false,
+                    "special_routes": [],
+                    "databot_carousel": null,
+                    "databot_carousel_1": null,
+                    "databot_carousel_2": null,
+                    "databot_event": null,
+                    "databot_delayed_function": null,
+                    "missing_products": null,
+                    "has_persistence": true,
+                    "query_params": null,
+                    "learn_names": true,
+                    "nodes_visited": [
+                        "node_6_1620943063225",
+                        "Bienvenido",
+                        "response_2_1610570356512",
+                        "node_6_1650547008718"
+                    ],
+                    "threshold_faq": 0.3,
+                    "use_emoticons": true,
+                    "use_base_skill": true,
+                    "use_disgressions": true,
+                    "use_own_fallback": true,
+                    "question_inactivity": 30000,
+                    "chatbot_autopen_once": true,
+                    "custom_flujo_seguido": [],
+                    "search_names_base_skill": true,
+                    "out_of_question_inactivity": false
+                },
+                "system": {}
+            }
+        }
+    }
+}
