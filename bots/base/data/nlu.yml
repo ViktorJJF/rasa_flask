@@ -1,0 +1,221 @@
+nlu:
+- examples: "- My name is [Rick] (user_na me) \n- My name is [Morty] (user_name)\n\
+    - [Archer] (user_name) is my name\n"
+  intent: get_name
+- examples: '- Hola
+
+    - Que tal
+
+    - buenos días
+
+    - hey
+
+    - hello
+
+    - hi
+
+    - hello there
+
+    - good morning
+
+    - good evening
+
+    - moin
+
+    - hey there
+
+    - let''s go
+
+    - hey dude
+
+    - goodmorning
+
+    - goodevening
+
+    - good afternoon
+
+    '
+  intent: greet
+- examples: '- cu
+
+    - good by
+
+    - cee you later
+
+    - good night
+
+    - bye
+
+    - goodbye
+
+    - have a nice day
+
+    - see you around
+
+    - bye bye
+
+    - see you later
+
+    '
+  intent: goodbye
+- examples: '- yes
+
+    - y
+
+    - indeed
+
+    - of course
+
+    - that sounds good
+
+    - correct
+
+    '
+  intent: affirm
+- examples: '- no
+
+    - n
+
+    - never
+
+    - I don''t think so
+
+    - don''t like that
+
+    - no way
+
+    - not really
+
+    '
+  intent: deny
+- examples: '- perfect
+
+    - great
+
+    - amazing
+
+    - feeling like a king
+
+    - wonderful
+
+    - I am feeling very good
+
+    - I am great
+
+    - I am amazing
+
+    - I am going to save the world
+
+    - super stoked
+
+    - extremely good
+
+    - so so perfect
+
+    - so good
+
+    - so perfect
+
+    '
+  intent: mood_great
+- examples: '- my day was horrible
+
+    - I am sad
+
+    - I don''t feel very well
+
+    - I am disappointed
+
+    - super sad
+
+    - I''m so sad
+
+    - sad
+
+    - very sad
+
+    - unhappy
+
+    - not good
+
+    - not very good
+
+    - extremly sad
+
+    - so saad
+
+    - so sad
+
+    '
+  intent: mood_unhappy
+- examples: '- are you a bot?
+
+    - are you a human?
+
+    - am I talking to a bot?
+
+    - am I talking to a human?
+
+    '
+  intent: bot_challenge
+- examples: '- Quiero decirte mi nombre
+
+    - dar nombre
+
+    '
+  intent: request_names
+- examples: '- ¿Cual es mi nombre?
+
+    - dime mi nombre
+
+    - como me llamo
+
+    '
+  intent: consulta_nombre
+- examples: '- jaja
+
+    - jajaja
+
+    - xd
+
+    - xD
+
+    - XD
+
+    - jajaja
+
+    - jajajajaj
+
+    '
+  intent: generic_risa
+- examples: '- quien te creo?
+
+    - quien es tu creador?
+
+    - tu creador
+
+    - databot
+
+    '
+  intent: generic_quien_te_creo
+- examples: '- ubicacion
+
+    - donde estan ubicados
+
+    - direcciones
+
+    '
+  intent: system_ecommerce_ubicacion
+- examples: '- I want to order food
+
+    - What is 2 + 2?
+
+    - Who''s the US President?
+
+    '
+  intent: out_of_scope
+- examples: '- action
+
+    '
+  intent: databot_action
+version: '3.1'

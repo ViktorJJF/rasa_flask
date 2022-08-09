@@ -44,7 +44,7 @@ out/
 tmp_training_data.json
 .DS_Store
 models/
-bots/
+# bots/
 .mypy_cache/
 *.tar.gz
 secrets.tar

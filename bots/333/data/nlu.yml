@@ -1,0 +1,177 @@
+version: "3.1"
+
+nlu:
+  - lookup: country
+    examples: |
+      - Afghanistan
+      - Albania
+      - Zambia
+      - Zimbabwe
+  - intent: confirm
+    examples: |
+      - can I confirm
+      - I want to confirm
+      - I would like to confirm that
+  - intent: thankyou
+    examples: |
+      - thank you
+      - thanks
+      - thanks a lot
+      - thank you so much!
+  - intent: afirm
+    examples: |
+      - yes
+      - yes, of course
+  - synonym: Ciudad de Lima
+    examples: |
+      - Lima
+      - Lima Provincias
+  - intent: check_balance
+    examples: |
+      -[Bogota](countries)
+      -[Lima](countries)
+      -[Quito](countries)
+      -La ciudad [Quito]{"entity": "countries", "value": "Quito x1"}
+
+  - intent: get_name
+    examples: |
+      - My name is [Rick] (user_name) 
+      - My name is [Morty] (user_name)
+      - [Archer] (user_name) is my name
+  - intent: greet
+    examples: |
+      - Hola
+      - Que tal
+      - buenos días
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: request_names
+    examples: |
+      - Quiero decirte mi nombre
+      - dar nombre
+  - intent: consulta_nombre
+    examples: |
+      - ¿Cual es mi nombre?
+  - intent: out_of_scope
+    examples: |
+      - I want to order food
+      - What is 2 + 2?
+      - Who's the US President?
+  - intent: doing_great
+    examples: |
+      - me va bien, gracias
+  - intent: ubicacion
+    examples: |
+      - direcciones
+      - donde estan ubicados
+      - ubicacion
+  - intent: get_started
+    examples: |
+      - get_started
+  - intent: welcome
+    examples: |
+      - buena
+      - como estas
+      - como va
+      - hello
+      - hi
+      - hola
+      - holaa
+      - holi
+      - oli
+  - intent: que_color_es
+    examples: |
+      - que color es?
+      - y su color?
+  - intent: me_gustan_las_frutas
+    examples: |
+      - me gustan las [manzanas](custom_fruta)
+      - me gustan las [naranjas](custom_fruta)
+  - intent: soy_usuario_premium
+    examples: |
+      - soy premium
+      - premium

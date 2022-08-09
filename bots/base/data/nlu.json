@@ -1,0 +1,65 @@
+{
+    "nlu": [
+        {
+            "examples": "- My name is [Rick] (user_na me) \n- My name is [Morty] (user_name)\n- [Archer] (user_name) is my name\n",
+            "intent": "get_name"
+        },
+        {
+            "examples": "- Hola\n- Que tal\n- buenos días\n- hey\n- hello\n- hi\n- hello there\n- good morning\n- good evening\n- moin\n- hey there\n- let's go\n- hey dude\n- goodmorning\n- goodevening\n- good afternoon\n",
+            "intent": "greet"
+        },
+        {
+            "examples": "- cu\n- good by\n- cee you later\n- good night\n- bye\n- goodbye\n- have a nice day\n- see you around\n- bye bye\n- see you later\n",
+            "intent": "goodbye"
+        },
+        {
+            "examples": "- yes\n- y\n- indeed\n- of course\n- that sounds good\n- correct\n",
+            "intent": "affirm"
+        },
+        {
+            "examples": "- no\n- n\n- never\n- I don't think so\n- don't like that\n- no way\n- not really\n",
+            "intent": "deny"
+        },
+        {
+            "examples": "- perfect\n- great\n- amazing\n- feeling like a king\n- wonderful\n- I am feeling very good\n- I am great\n- I am amazing\n- I am going to save the world\n- super stoked\n- extremely good\n- so so perfect\n- so good\n- so perfect\n",
+            "intent": "mood_great"
+        },
+        {
+            "examples": "- my day was horrible\n- I am sad\n- I don't feel very well\n- I am disappointed\n- super sad\n- I'm so sad\n- sad\n- very sad\n- unhappy\n- not good\n- not very good\n- extremly sad\n- so saad\n- so sad\n",
+            "intent": "mood_unhappy"
+        },
+        {
+            "examples": "- are you a bot?\n- are you a human?\n- am I talking to a bot?\n- am I talking to a human?\n",
+            "intent": "bot_challenge"
+        },
+        {
+            "examples": "- Quiero decirte mi nombre\n- dar nombre\n",
+            "intent": "request_names"
+        },
+        {
+            "examples": "- ¿Cual es mi nombre?\n- dime mi nombre\n- como me llamo\n",
+            "intent": "consulta_nombre"
+        },
+        {
+            "examples": "- jaja\n- jajaja\n- xd\n- xD\n- XD\n- jajaja\n- jajajajaj\n",
+            "intent": "generic_risa"
+        },
+        {
+            "examples": "- quien te creo?\n- quien es tu creador?\n- tu creador\n- databot\n",
+            "intent": "generic_quien_te_creo"
+        },
+        {
+            "examples": "- ubicacion\n- donde estan ubicados\n- direcciones\n",
+            "intent": "system_ecommerce_ubicacion"
+        },
+        {
+            "examples": "- I want to order food\n- What is 2 + 2?\n- Who's the US President?\n",
+            "intent": "out_of_scope"
+        },
+        {
+            "examples": "- action\n",
+            "intent": "databot_action"
+        }
+    ],
+    "version": "3.1"
+}

@@ -1,0 +1,184 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - get_name
+  - consulta_nombre
+  - nlu_fallback
+  - confirm
+  - thankyou
+  - afirm
+  - doing_great
+  - ubicacion
+  - get_started
+  - que_color_es
+  - me_gustan_las_frutas
+  - soy_usuario_premium
+
+entities:
+  - countries
+  - custom_fruta
+
+responses:
+  utter_bienvenido:
+    - text: Hola, estoy en línea ¿En qué te puedo ayudar?
+  utter_opciones_landing:
+    - text: Te presento estas opciones
+      buttons:
+        - title: "🤖 ¡Quiero un chatbot ahora!"
+          payload: "quiero_un_chatbot_ahora"
+        - title: "🙋 ¿Qué es un chatbot?"
+          payload: "que_es_un_chatbot"
+        - title: "✅ Características"
+          payload: "opcion_beneficios"
+        - title: "🚀 Casos de éxito"
+          payload: "casos_de_exito"
+        - title: "📕 Cotizar un chatbot"
+          payload: "cotizar"
+        - title: "Otras consultas"
+          payload: "otras_consultas"
+  utter_me_gustan_las_frutas:
+    - text: Genial! te gustan las frutas
+  utter_color_none:
+    - text: pero a que fruta te refieres?
+  utter_confirm:
+    - text: Do you really want to confirm that?
+  utter_color_manzanas:
+    - text: Las manzanas son rojas, pero tambien hay verdes
+  utter_color_naranjas:
+    - text: Las naranjas son naranjas xd
+  utter_option_1:
+    - text: Seleccionaste la opcion 1
+  utter_ubicacion:
+    - text: Estamos ubicados en calle falsa 123
+    - text: Calle falsa 123 jeje
+  utter_confirmed:
+    - text: Confirmed.
+  utter_greet:
+    - text: |-
+        You can now create a new Rasa assistant and also talk to it by simply running "rasa init".
+        This comes with some sample training data and the required configuration files to get you started. You can also talk to the assistant after it is done training.
+  utter_ask_how_doing:
+    - text: como te va?
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Felicidades, sigue asi!"
+
+  utter_goodbye:
+    - text: "Chau! 👌"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+  utter_ask_first_name:
+    - text: "Cual es tu nombre?"
+  utter_ask_last_name:
+    - text: "Genial! eres {first_name}, cual es tu apellido?"
+  utter_slots_values:
+    - text: "Se que eres {first_name} con apellido {last_name}"
+  utter_submit:
+    - text: "Gracias por la data!"
+
+  utter_fallback:
+    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  utter_default:
+    - text: Perdon, no entendi. Podrias repetirlo?
+
+forms:
+  name_form:
+    required_slots:
+      - first_name
+      - last_name
+slots:
+  custom_fruta:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: custom_fruta
+  countries:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: countries
+  last_message_from_text:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        not_intent: none
+  slot_name:
+    type: text
+    mappings:
+      - type: from_text
+        intent: None
+  slot_name_2:
+    type: text
+    mappings:
+      - type: from_text
+  is_premium:
+    type: bool
+    mappings:
+      - type: from_trigger_intent
+        value: true
+        intent: soy_usuario_premium
+  last_message_from_intent:
+    type: any
+    mappings:
+      - type: from_intent
+        value: true
+        intent: soy_usuario_premium
+  is_premium_v2:
+    type: any
+    mappings:
+      - type: from_intent
+        value: true
+        intent: soy_usuario_premium
+  language:
+    type: text
+    initial_value: "aea"
+    mappings:
+      - type: custom
+
+  databot_carousel:
+    type: any
+    initial_value: '{ "value": { "from": "1", "to": "2" } }'
+    mappings:
+      - type: custom
+
+  first_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: first_name
+  last_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: last_name
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+config:
+  store_entities_as_slots: true
