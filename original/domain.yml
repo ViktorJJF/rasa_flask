@@ -1,0 +1,121 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - get_name
+  - consulta_nombre
+  - nlu_fallback
+  - generic_quien_te_creo
+
+responses:
+  utter_greet:
+    - text: "Bienvenido a Databot & Rasa! 🐦"
+
+  utter_generic_quien_te_creo:
+    - text: "Mis creadores son los cracks de Databot 🐦"
+  utter_system_ecommerce_ubicacion:
+    - text: "Estamos ubicados en {system_ecommerce_ubicacion} \n\n te ayudo en algo mas? 🐦 "
+
+  utter_generic_risa:
+    - text: "jaja 🤣"
+    - text: "🤣"
+    - text: "jajaja 😂"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Chau! 👌"
+
+  utter_iamabot:
+    - text: "Soy un bot creado con RASA"
+  utter_ask_first_name:
+    - text: "Cual es tu nombre?"
+  utter_ask_last_name:
+    - text: "Genial! eres {first_name}, cual es tu apellido?"
+  utter_slots_values:
+    - text: "Se que eres {first_name} con apellido {last_name}"
+  utter_submit:
+    - text: "Gracias por la data!"
+
+  utter_fallback:
+    - text: Creo que no estoy entendiendo. ¿Puedes repetirlo?
+
+  utter_default:
+    - text: Perdón, no entendí. ¿Podrías repetirlo?
+
+forms:
+  name_form:
+    required_slots:
+      - first_name
+      - last_name
+
+actions:
+  - databot_action
+
+slots:
+  language:
+    type: text
+    initial_value: "aea"
+    mappings:
+      - type: custom
+  slot_name:
+    type: text
+    mappings:
+      - type: from_text
+        not_intent: none
+  system_ecommerce_ubicacion:
+    type: text
+    initial_value: "Calle Falsa 123"
+    mappings:
+      - type: custom
+  config:
+    type: any
+    initial_value:
+      {
+        "value_1": "this",
+        "value_2": 2,
+        "objects": [{ "name": "Victor" }, { "name": "Juan" }],
+      }
+    mappings:
+      - type: custom
+
+  databot_carousel:
+    type: any
+    initial_value: '{ "value": { "from": "1", "to": "2" } }'
+    mappings:
+      - type: custom
+
+  first_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: first_name
+  last_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: last_name
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
