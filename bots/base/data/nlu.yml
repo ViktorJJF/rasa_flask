@@ -1,221 +1,230 @@
 nlu:
-- examples: "- My name is [Rick] (user_na me) \n- My name is [Morty] (user_name)\n\
-    - [Archer] (user_name) is my name\n"
-  intent: get_name
-- examples: '- Hola
+  - examples:
+      "- My name is [Rick] (user_na me) \n- My name is [Morty] (user_name)\n\
+      - [Archer] (user_name) is my name\n"
+    intent: get_name
+  - examples: "- Hola
 
-    - Que tal
+      - Que tal
 
-    - buenos días
+      - buenos días
 
-    - hey
+      - hey
 
-    - hello
+      - hello
 
-    - hi
+      - hi
 
-    - hello there
+      - hello there
 
-    - good morning
+      - good morning
 
-    - good evening
+      - good evening
 
-    - moin
+      - moin
 
-    - hey there
+      - hey there
 
-    - let''s go
+      - let's go
 
-    - hey dude
+      - hey dude
 
-    - goodmorning
+      - goodmorning
 
-    - goodevening
+      - goodevening
 
-    - good afternoon
+      - good afternoon
 
-    '
-  intent: greet
-- examples: '- cu
+      "
+    intent: greet
+  - examples: "- cu
 
-    - good by
+      - good by
 
-    - cee you later
+      - cee you later
 
-    - good night
+      - good night
 
-    - bye
+      - bye
 
-    - goodbye
+      - goodbye
 
-    - have a nice day
+      - have a nice day
 
-    - see you around
+      - see you around
 
-    - bye bye
+      - bye bye
 
-    - see you later
+      - see you later
 
-    '
-  intent: goodbye
-- examples: '- yes
+      "
+    intent: goodbye
+  - examples: "- yes
 
-    - y
+      - y
 
-    - indeed
+      - indeed
 
-    - of course
+      - of course
 
-    - that sounds good
+      - that sounds good
 
-    - correct
+      - correct
 
-    '
-  intent: affirm
-- examples: '- no
+      "
+    intent: affirm
+  - examples: "- no
 
-    - n
+      - n
 
-    - never
+      - never
 
-    - I don''t think so
+      - I don't think so
 
-    - don''t like that
+      - don't like that
 
-    - no way
+      - no way
 
-    - not really
+      - not really
 
-    '
-  intent: deny
-- examples: '- perfect
+      "
+    intent: deny
+  - examples: "- perfect
 
-    - great
+      - great
 
-    - amazing
+      - amazing
 
-    - feeling like a king
+      - feeling like a king
 
-    - wonderful
+      - wonderful
 
-    - I am feeling very good
+      - I am feeling very good
 
-    - I am great
+      - I am great
 
-    - I am amazing
+      - I am amazing
 
-    - I am going to save the world
+      - I am going to save the world
 
-    - super stoked
+      - super stoked
 
-    - extremely good
+      - extremely good
 
-    - so so perfect
+      - so so perfect
 
-    - so good
+      - so good
 
-    - so perfect
+      - so perfect
 
-    '
-  intent: mood_great
-- examples: '- my day was horrible
+      "
+    intent: mood_great
+  - examples: "- my day was horrible
 
-    - I am sad
+      - I am sad
 
-    - I don''t feel very well
+      - I don't feel very well
 
-    - I am disappointed
+      - I am disappointed
 
-    - super sad
+      - super sad
 
-    - I''m so sad
+      - I'm so sad
 
-    - sad
+      - sad
 
-    - very sad
+      - very sad
 
-    - unhappy
+      - unhappy
 
-    - not good
+      - not good
 
-    - not very good
+      - not very good
 
-    - extremly sad
+      - extremly sad
 
-    - so saad
+      - so saad
 
-    - so sad
+      - so sad
 
-    '
-  intent: mood_unhappy
-- examples: '- are you a bot?
+      "
+    intent: mood_unhappy
+  - examples: "- are you a bot?
 
-    - are you a human?
+      - are you a human?
 
-    - am I talking to a bot?
+      - am I talking to a bot?
 
-    - am I talking to a human?
+      - am I talking to a human?
 
-    '
-  intent: bot_challenge
-- examples: '- Quiero decirte mi nombre
+      "
+    intent: bot_challenge
+  - examples: "- Quiero decirte mi nombre
 
-    - dar nombre
+      - dar nombre
 
-    '
-  intent: request_names
-- examples: '- ¿Cual es mi nombre?
+      "
+    intent: request_names
+  - examples: "- ¿Cual es mi nombre?
 
-    - dime mi nombre
+      - dime mi nombre
 
-    - como me llamo
+      - como me llamo
 
-    '
-  intent: consulta_nombre
-- examples: '- jaja
+      "
+    intent: consulta_nombre
+  - examples: "- jaja
 
-    - jajaja
+      - jajaja
 
-    - xd
+      - xd
 
-    - xD
+      - xD
 
-    - XD
+      - XD
 
-    - jajaja
+      - jajaja
 
-    - jajajajaj
+      - jajajajaj
 
-    '
-  intent: generic_risa
-- examples: '- quien te creo?
+      "
+    intent: generic_risa
+  - examples: "- quien te creo?
 
-    - quien es tu creador?
+      - quien es tu creador?
 
-    - tu creador
+      - tu creador
 
-    - databot
+      - databot
 
-    '
-  intent: generic_quien_te_creo
-- examples: '- ubicacion
+      "
+    intent: generic_quien_te_creo
+  - examples: "- ubicacion
 
-    - donde estan ubicados
+      - donde estan ubicados
 
-    - direcciones
+      - direcciones
 
-    '
-  intent: system_ecommerce_ubicacion
-- examples: '- I want to order food
+      "
+    intent: system_ecommerce_ubicacion
+  - examples: "- I want to order food
 
-    - What is 2 + 2?
+      - What is 2 + 2?
 
-    - Who''s the US President?
+      - Who's the US President?
 
-    '
-  intent: out_of_scope
-- examples: '- action
+      "
+    intent: out_of_scope
+  - examples: "- action
 
-    '
-  intent: databot_action
-version: '3.1'
+      "
+    intent: databot_action
+
+  - regex: account_number
+    examples: |
+      - \d{10,12}
+  - intent: inform
+    examples: |
+      - my account number is [1234567891](account_number)
+      - This is my account number [1234567891](account_number)
+version: "3.1"

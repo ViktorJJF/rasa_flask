@@ -175,3 +175,8 @@ nlu:
     examples: |
       - soy premium
       - premium
+
+  - intent: soy_usuario_gratuito
+    examples: |
+      - soy gratuito
+      - gratuito

@@ -1,57 +1,61 @@
 actions:
-- databot_action
+  - databot_action
 forms:
   name_form:
     required_slots:
-    - first_name
-    - last_name
+      - first_name
+      - last_name
 intents:
-- greet
-- goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
-- bot_challenge
-- get_name
-- consulta_nombre
-- nlu_fallback
-- generic_quien_te_creo
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - get_name
+  - consulta_nombre
+  - nlu_fallback
+  - generic_quien_te_creo
+
+entities:
+  - account_number
 responses:
   utter_ask_first_name:
-  - text: Cual es tu nombre?
+    - text: Cual es tu nombre?
   utter_ask_last_name:
-  - text: Genial! eres {first_name}, cual es tu apellido?
+    - text: Genial! eres {first_name}, cual es tu apellido?
   utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
+    - image: https://i.imgur.com/nGF1K8f.jpg
+      text: "Here is something to cheer you up:"
   utter_default:
-  - text: Perdón, no entendí. ¿Podrías repetirlo?
+    - text: Perdón, no entendí. ¿Podrías repetirlo?
   utter_did_that_help:
-  - text: Did that help you?
+    - text: Did that help you?
   utter_fallback:
-  - text: Creo que no estoy entendiendo. ¿Puedes repetirlo?
+    - text: Creo que no estoy entendiendo. ¿Puedes repetirlo?
   utter_generic_quien_te_creo:
-  - text: Mis creadores son los cracks de Databot 🐦
+    - text: Mis creadores son los cracks de Databot 🐦
   utter_generic_risa:
-  - text: jaja 🤣
-  - text: 🤣
-  - text: jajaja 😂
+    - text: jaja 🤣
+    - text: 🤣
+    - text: jajaja 😂
   utter_goodbye:
-  - text: Chau! 👌
+    - text: Chau! 👌
   utter_greet:
-  - text: Bienvenido a Databot & Rasa! 🐦
+    - text: Bienvenido a Databot & Rasa! 🐦
   utter_happy:
-  - text: Great, carry on!
+    - text: Great, carry on!
   utter_iamabot:
-  - text: Soy un bot creado con RASA
+    - text: Soy un bot creado con RASA
   utter_slots_values:
-  - text: Se que eres {first_name} con apellido {last_name}
+    - text: Se que eres {first_name} con apellido {last_name}
   utter_submit:
-  - text: Gracias por la data!
+    - text: Gracias por la data!
   utter_system_ecommerce_ubicacion:
-  - text: "Estamos ubicados en {system_ecommerce_ubicacion} \n\n te ayudo en algo\
-      \ mas? \U0001F426 "
+    - text:
+        "Estamos ubicados en {system_ecommerce_ubicacion} \n\n te ayudo en algo\
+        \ mas? \U0001F426 "
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
@@ -59,47 +63,47 @@ slots:
   config:
     initial_value:
       objects:
-      - name: Victor
-      - name: Juan
+        - name: Victor
+        - name: Juan
       value_1: this
       value_2: 2
     mappings:
-    - type: custom
+      - type: custom
     type: any
   databot_carousel:
     initial_value: '{ "value": { "from": "1", "to": "2" } }'
     mappings:
-    - type: custom
+      - type: custom
     type: any
   first_name:
     influence_conversation: true
     mappings:
-    - conditions:
-      - active_loop: name_form
-        requested_slot: first_name
-      type: from_text
+      - conditions:
+          - active_loop: name_form
+            requested_slot: first_name
+        type: from_text
     type: text
   language:
     initial_value: aea
     mappings:
-    - type: custom
+      - type: custom
     type: text
   last_name:
     influence_conversation: true
     mappings:
-    - conditions:
-      - active_loop: name_form
-        requested_slot: last_name
-      type: from_text
+      - conditions:
+          - active_loop: name_form
+            requested_slot: last_name
+        type: from_text
     type: text
   slot_name:
     mappings:
-    - not_intent: none
-      type: from_text
+      - not_intent: none
+        type: from_text
     type: text
   system_ecommerce_ubicacion:
     initial_value: Calle Falsa 123
     mappings:
-    - type: custom
+      - type: custom
     type: text
-version: '3.1'
+version: "3.1"

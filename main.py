@@ -181,9 +181,9 @@ def new_message():
     predict_next_for_sender_id = asyncio.run(
         current_agent.predict_next_for_sender_id(sender_id=sender_id)
     )
-    predict_next_with_tracker = current_agent.predict_next_with_tracker(
-        tracker=tracker_state
-    )
+    # predict_next_with_tracker = current_agent.predict_next_with_tracker(
+    #     tracker=tracker_state
+    # )
     # log_message=asyncio.run(current_agent.log_message(input))
     # tracker=retrieve(sender_id)
     # print(f"tracker encontrado: {tracker}")
@@ -194,8 +194,8 @@ def new_message():
         {
             "message": message,
             "predict_next_for_sender_id": predict_next_for_sender_id,
-            "parse_message": parse_message,
-            "predict_next_with_tracker": predict_next_with_tracker,
+            # "parse_message": parse_message,
+            # "predict_next_with_tracker": predict_next_with_tracker,
         }
     )
     return message
