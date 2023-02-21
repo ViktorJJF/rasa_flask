@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  rasita:
+    build: .
+    container_name: "testing_rasa"
+    ports:
+      - "9000:9000"
+    links:
+      - duckling
+  duckling:
+    image: rasa/duckling
+    container_name: "duckling_service"
+    ports:
+      - "8000:8000" 
