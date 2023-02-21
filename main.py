@@ -193,8 +193,8 @@ def new_message():
     message = jsonify(
         {
             "message": message,
-            "predict_next_for_sender_id": predict_next_for_sender_id,
-            # "parse_message": parse_message,
+            # "predict_next_for_sender_id": predict_next_for_sender_id,
+            "parse_message": parse_message,
             # "predict_next_with_tracker": predict_next_with_tracker,
         }
     )
